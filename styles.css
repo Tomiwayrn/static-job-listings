@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: hsl(180, 52%, 96%);
+   
+}
+
+header {
+    height: 6rem;
+    background: url(./images/bg-header-mobile.svg) no-repeat center  hsl(180, 29%, 50%);
+    margin-bottom: 5rem;
+}
+
+
+
+h5 {
+    color: hsl(180, 29%, 50%);
+}
+
+h4 {
+    margin: 0;
+}
+
+.displayButtons-container {
+    background: white;
+    padding: 13px 20px;
+    width: 84%;
+    margin: 0 auto;
+    margin-top: 5%;
+    display: flex;
+    display: none;
+    justify-content: space-between;
+    border-radius: 3px;
+    box-shadow: 10px 10px 20px hsla(180, 8%, 52%, .4);
+    animation: new-element .5s ease-in;
+}
+
+
+
+
+.clear-btn {
+    color: hsl(180, 29%, 50%);
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+
+.clear-btn:hover {
+    transition: .5 ease-in;
+    border-bottom: 1px solid hsl(180, 29%, 50%);
+}
+
+
+.current-user-container {
+    background: white;
+    padding: 20px;
+    padding-top: 15px;
+    border-radius: 4px;
+    width: 88%;
+    margin: 0 auto;
+    box-shadow: 10px 10px 20px hsla(180, 8%, 52%, 0.13);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.user-img {
+    position: absolute;
+    top: -9%;
+    width: 45px;
+}
+
+.spans {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.featured {
+    background-color: black;
+    color: white;
+    padding: 4px 6px;
+    border-radius: 20px;
+    font-size: .6rem;
+    text-transform: uppercase;
+}
+
+.new {
+    background: hsl(180, 29%, 50%);
+    color: white;
+    padding: 4px 6px;
+    border-radius: 20px;
+    font-size: .6rem;
+    text-transform: uppercase;
+
+}
+
+.user-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-footer {
+    display: flex;
+    color: hsl(180, 8%, 52%);
+    font-size: .8rem;
+    border-bottom: 1px solid hsl(180, 8%, 52%); 
+}
+
+.user-footer ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+ 
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+button:hover {
+    cursor: pointer;
+    transition: .5s ease-in;
+    
+}
+
+.btns-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btns-container button, .user-btn {
+    color: hsl(180, 29%, 50%);
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 3px 8px;
+    border-radius: 3px;
+    background: hsl(180, 31%, 95%) ;
+    
+   
+}
+
+.user-btn {
+    position: relative;
+} 
+
+.icon-remove {
+    background: hsl(180, 29%, 50%);
+    margin-left: 6px;
+    padding: 3px 5px 3px 5px;
+    margin-top: -3px;
+    display: inline;
+    position: absolute;
+
+}
+
+ .icon-remove:hover {
+    background: black;
+    transition: .5s ease-in;
+}
+
+.icon-remove img {
+    width: 10px;
+    margin-top: 2px;
+}
+
+.btns-container button:hover {
+    background: hsl(180, 29%, 50%);
+    color: hsl(180, 31%, 95%);
+    transition: .5 ease-in;
+}
+
+.currentbtn {
+    display: flex;
+    gap: 30px;
+}
+
+/* Animations for dynamic elements */
+@keyframes new-element {
+    0% {
+        transform: scale(0) ;
+        opacity: 0;
+          }
+    100% {
+        transform: scale(1) ;
+        opacity: 1;
+    }
+}
+
+
+@media screen and (min-width:728px) {
+    header {
+        background: hsl(180, 29%, 50%) url(./images/bg-header-desktop.svg) no-repeat;
+    }
+
+    .user-img {
+        position: relative;
+        width: 65px;
+    }
+
+    .user-detail {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 40%; 
+       margin-right: 0 auto;
+    }
+    .current-user-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding-top: 0px ;
+        padding-bottom: 0px;
+        box-sizing: border-box;
+    }
+
+
+    .btns-container {
+      
+        margin-left: 100px;
+        justify-content: start;
+        justify-self: flex-end;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .user-footer {
+        border-bottom: none;
+    }
+}
